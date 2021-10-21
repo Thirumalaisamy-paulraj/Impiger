@@ -1,0 +1,29 @@
+.header{
+    color:black;
+    position: fixed;
+    width: 100%;
+    background-color:#000;
+    top: 0;
+    left: 0;
+    align-items: center;
+    height: 64px;
+    z-index: 1000;
+}
+.header .logo {
+    margin :auto;
+    width:fit-content;
+    font-size: xx-large;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+  
+    }
+  
+    
+    @media (max-width:768px){
+      .header .logo {
+        margin-left:auto;
+        margin-right: auto ;
+        height:100px;
+      }
+    }
