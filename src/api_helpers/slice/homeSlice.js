@@ -28,14 +28,18 @@ export const {
 } = homeSlice.actions
 const home=homeSlice.reducer;
 export default home;
-export function blogdata(modify){
+export function blogdata(modify,payload){
     return dispatch =>{
         dispatch(dataReq());
         if(modify){
-           return  dispatch(dataSuccess(Blogdata))
+            
+            let datas=[...Blogdata.blog.contents.datas[0].content,...payload]
+            console.log("newww",datas)
+           return   dispatch(dataSuccess(datas))
         }
         else {
-            return dispatch(dataSuccess(Blogdata))
+            let datas=[...Blogdata.blog.contents.datas[0].content]
+            return dispatch(dataSuccess(datas))
         }
     }
 }
